@@ -5,12 +5,11 @@ const env = require('../env');
 // Connect with DB using Sequelize
 module.exports = new Sequelize(env.DB_NAME, env.DB_USERNAME, env.DB_PASSWORD, {
     host: env.DB_HOST,
-    dialect: env.DB_DIALECT
-});
+    dialect: env.DB_DIALECT,
 
-// Testing DB connection
-// db.authenticate().then((req, res) => {
-//     console.log("DB connected successfully...");
-// }).catch(err => {
-//     console.log(err);
-// });
+    //ss https://stackoverflow.com/a/40044062/7574023
+    define: {
+        createdAt: 'createdat',
+        updatedAt: 'updatedat'
+    }
+});

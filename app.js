@@ -4,7 +4,6 @@ const expHand = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const db = require('./config/database'); // connect with DB via Sequelize
 const env = require('./env');
 
 const app = express();
@@ -12,6 +11,8 @@ const app = express();
 app.get('/', (req, res, next) => {
     res.send('Index');
 });
+
+app.use('/gigs', require('./routes/gigs'));
 
 // Starting the Server
 const port  = process.env.PORT || env.APP_PORT;
