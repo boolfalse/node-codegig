@@ -1,0 +1,19 @@
+{
+  "name": "codegig",
+  "version": "1.0.0",
+  "description": "Build a Node.js App With Sequelize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boolfalse/node-codegig.git"
+  },
+  "author": "boolfalse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boolfalse/node-codegig/issues"
+  },
+  "homepage": "https://github.com/boolfalse/node-codegig#readme"
+}
