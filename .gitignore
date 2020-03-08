@@ -420,3 +420,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,linux,macos,windows,phpstorm+all,webstorm+all,intellij+all,jetbrains+all
+
+
+
+env.js
