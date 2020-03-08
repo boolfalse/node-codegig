@@ -11,5 +11,7 @@ module.exports = new Sequelize(env.DB_NAME, env.DB_USERNAME, env.DB_PASSWORD, {
     define: {
         createdAt: 'createdat',
         updatedAt: 'updatedat'
-    }
+    },
+    //ss https://stackoverflow.com/a/53420409/7574023
+    // timestamps: false
 });
