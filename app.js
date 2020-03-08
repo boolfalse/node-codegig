@@ -8,7 +8,16 @@ const env = require('./env');
 
 const app = express();
 
-app.get('/', (req, res, next) => {
+// Set Static folder
+app.use('/', express.static('public'));
+
+// Express HandleBars
+app.engine('handlebars', expHand({
+    defaultLayout: 'main',
+}));
+app.set('view engine', 'handlebars');
+
+app.get('/', (req, res) => {
     res.send('Index');
 });
 
