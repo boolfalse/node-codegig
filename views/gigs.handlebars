@@ -1,2 +1,20 @@
-
-<h2>Gigs Template</h2>
+<section id="gigs" class="container">
+    <h1>All Gigs</h1>
+<!--    //ss https://stackoverflow.com/a/59696106/7574023-->
+    {{#each gigs}}
+    <div class="gig">
+        <h3>{{ @key }}</h3>
+        <h3>{{ title }}</h3>
+        <p>{{ description }}</p>
+        <ul>
+            <li>Budget: {{ this.budget }}</li>
+            <li><a href="mailto:{{ this.contact_email }}" class="btn btn-reverse">Apply Now</a></li>
+        </ul>
+        <div class="tech">
+            <small>Technologies Needed: <span>{{ this.technologies }}123</span></small>
+        </div>
+    </div>
+    {{else}}
+    <p>No Gigs available!</p>
+    {{/each}}
+</section>
