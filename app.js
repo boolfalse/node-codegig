@@ -4,7 +4,7 @@ const expHand = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const db = require('./config/database'); // connect with DB via Sequalize
+const db = require('./config/database'); // connect with DB via Sequelize
 const env = require('./env');
 
 const app = express();

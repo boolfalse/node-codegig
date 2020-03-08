@@ -1,5 +1,5 @@
 
-## Build a Node.js App With Sequelize
+## Build a Node.js App with Sequelize
 
 #### Installation:
 
