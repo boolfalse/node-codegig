@@ -18,7 +18,9 @@ app.engine('handlebars', expHand({
 app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
-    res.send('Index');
+    res.render('index', {
+        layout: 'landing' // if you want to use another layout instead of main, we need to have a 2-nd param here as object
+    });
 });
 
 app.use('/gigs', require('./routes/gigs'));

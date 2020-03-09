@@ -19,8 +19,13 @@ router.get('/', (req, res) => {
         });
 });
 
-// Create Gig
+// Create Gig Page
 router.get('/create', (req, res) => {
+    res.render('create');
+});
+
+// Create Gig
+router.post('/create', (req, res) => {
     const data = {
         title: "Looking for a WordPress developer!",
         technologies: "WordPress, PHP, HTML, CSS",
