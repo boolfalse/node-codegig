@@ -3,6 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 const Gig = require('../models/gig');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 // Read Gig list
 router.get('/', (req, res) => {
@@ -22,6 +24,31 @@ router.get('/', (req, res) => {
 // Create Gig Page
 router.get('/create', (req, res) => {
     res.render('create');
+});
+
+// Search Gigs
+router.get('/search', (req, res) => {
+    let { term } = req.query;
+
+    // Make term lowercase
+    term = term.toLowerCase();
+
+    // Find appropriate gigs
+    Gig.findAll({
+        where: {
+            technologies: {
+                [Op.like]: '%' + term + '%'
+            }
+        }
+    })
+        .then(gigs => {
+            res.render('gigs', {
+                gigs
+            });
+        })
+        .catch(err => {
+            console.log(err);
+        });
 });
 
 // Create Gig
