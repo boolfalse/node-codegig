@@ -17,6 +17,9 @@ app.engine('handlebars', expHand({
 }));
 app.set('view engine', 'handlebars');
 
+// Body Parser
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.get('/', (req, res) => {
     res.render('index', {
         layout: 'landing' // if you want to use another layout instead of main, we need to have a 2-nd param here as object
