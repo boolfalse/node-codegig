@@ -19,4 +19,4 @@ npm start
  
 #### Source(s):
 
-- [YouTube course](https://www.youtube.com/watch?v=bOHysWYMZM0)
+- [Traversy Media - Build a Node.js App With Sequelize](https://www.youtube.com/playlist?list=PLillGF-RfqbZyLc9sMQ72_u3FW9fVxo1p)
