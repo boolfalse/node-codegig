@@ -20,7 +20,7 @@
   "homepage": "https://github.com/boolfalse/node-codegig#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^5.3.1",
     "handlebars": "^4.7.7",
     "pg": "^7.18.2",
